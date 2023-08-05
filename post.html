@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiple Choice Quiz</title>
+</head>
+<body>
+  <h1>Multiple Choice Quiz</h1>
+  <div id="question"></div>
+  <div id="options"></div>
+  <button id="submit">Submit</button>
+  <div id="result"></div>
+
+  <script>
+
+// Array of quiz questions
+const questions = [
+  {
+    question: "What is the capital of France?",
+    options: ["Paris", "London", "Berlin", "Madrid"],
+    answer: 0
+  },
+  {
+    question: "Which planet is known as the Red Planet?",
+    options: ["Mars", "Jupiter", "Venus", "Saturn"],
+    answer: 0
+  },
+  {
+    question: "What is the largest ocean in the world?",
+    options: ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
+    answer: 0
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+const questionElement = document.getElementById("question");
+const optionsElement = document.getElementById("options");
+const submitButton = document.getElementById("submit");
+const resultElement = document.getElementById("result");
+
+// Display current question and options
+function displayQuestion() {
+  const question = questions[currentQuestion];
+  questionElement.textContent = question.question;
+  
+  optionsElement.innerHTML = "";
+  question.options.forEach((option, index) => {
+    const radio = document.createElement("input");
+    radio.type = "radio";
+    radio.name = "option";
+    radio.value = index;
+    optionsElement.appendChild(radio);
+
+    const label = document.createElement("label");
+    label.textContent = option;
+    optionsElement.appendChild(label);
+    optionsElement.appendChild(document.createElement("br"));
+  });
+}
+
+// Check the selected answer and move to the next question
+function submitAnswer() {
+  const selectedOption = document.querySelector('input[name="option"]:checked');
+  if (!selectedOption) {
+    return; // No option selected
+  }
+
+  const answer = parseInt(selectedOption.value);
+  if (answer === questions[currentQuestion].answer) {
+    score++;
+  }
+
+  currentQuestion++;
+  selectedOption.checked = false;
+
+  if (currentQuestion < questions.length) {
+    displayQuestion();
+  } else {
+    displayResult();
+  }
+}
+
+// Display the final quiz result
+function displayResult() {
+  questionElement.style.display = "none";
+  optionsElement.style.display = "none";
+  submitButton.style.display = "none";
+
+  resultElement.textContent = `You scored ${score} out of ${questions.length}!`;
+}
+
+// Event listeners
+submitButton.addEventListener("click", submitAnswer);
+
+// Display the first question
+displayQuestion();
+
+
+
+  </script>
+</body>
+</html>

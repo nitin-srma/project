@@ -1,0 +1,873 @@
+<!-- MADE WITH LOVE BY NITIN SHARMA !! -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="jquery-3.6.4.min.js"></script>
+  <script src="process.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="icon" type="image/x-icon" href="res/n-logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+  <title>AirSchools</title>
+</head>
+
+<body>
+
+  <!-- sidebar -->
+  <div class="w3-sidebar w3-teal w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-xlarge w3-animate-left" onclick="w3_close()">Close &times;</button>
+    <a class="w3-bar-item w3-button" onclick="/* window.open('post.html','_self') */
+      var savedName = localStorage.getItem('username');
+      Swal.fire({
+      title: 'Locked!',
+      text: savedName + '! This feature is coming soon.',
+      icon: 'info',
+      confirmButtonText: 'OK'
+    });
+    ">Posts</a>
+    <a onclick="window.open('planner.html','_self')" class="w3-bar-item w3-button">Task Planner</a>
+    <a onclick="window.open('askQuery.html','_self')" class="w3-bar-item w3-button" >Ask Your Query</a>
+    <a href="#scroller" class="w3-bar-item w3-button">More Stuff</a>
+    <a href="#accordion" class="w3-bar-item w3-button">Help</a>
+  </div>
+
+
+  <div id="main">
+    <div class="navbar" id="navbar">
+      <a href="index.html"><span class="logo">air schools</span></a>
+      <div class="menubr">
+        <span> <button id="openNav" class="w3-button w3-teal w3-small" onclick="w3_open()">Menu &#9776;</button>
+        </span>
+      </div>
+      <div class="menuphone">
+        <span>Menu <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path
+              d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+          </svg></span>
+        <div class="navlinks-r">
+          <ul>
+            <li onclick="window.open('cbse.html','_self')">Cbse</li>
+            <li onclick="window.open('notification.html','_self')">Notification</li>
+            <li onclick="window.open('planner.html','_self')">Task Planner</li>
+            <li onclick="window.open('askQuery.html','_self')">Ask Query</li>
+            <li onclick="/* window.open('post.html','_self') */
+            var savedName = localStorage.getItem('username');
+            Swal.fire({
+            title: 'Locked!',
+            text: savedName + '! This feature is coming soon.',
+            icon: 'info',
+            confirmButtonText: 'OK'
+          });
+          ">Posts</li>
+            <li><a href="#scroller">More Stuff</a></li>
+            <li><a href="#accordion">Help</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><img src="res/light.png" alt="lightmodeon" class="light" /></li>
+          <li><img src="res/dark.png" alt="darkmodeon" class="dark" /></li>
+          <li class="pro" onclick="
+          var savedName = localStorage.getItem('username');
+                Swal.fire({
+                title: 'Locked!',
+                text: savedName + '! This feature is coming soon.',
+                icon: 'info',
+                confirmButtonText: 'OK'
+              });
+          ">Pro</li>
+          <li class="one" onclick="window.open('cbse.html', '_self')">CBSE</li>
+          <li class="two" onclick="window.open('notification.html', '_self')">Notification</li>
+          <li class="three" id="name">NSM</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="main" onclick="closeNav()">
+      <div class="content">
+        <span class="main-text">Learn To Win</span>
+        <p class="low-text"></p>
+        <div class="autocomplete" style="width:300px;">
+          <input type="search" placeholder="Search what we have in this website" id="searchbox">
+        </div>
+        <p class="sub-text"><a href="#accordion" id="showName">Not Sure Were To Begin?</a></p>
+      </div>
+    </section>
+
+    <section class="sec-six">
+      <div class="left">
+        <span class="class">SIXTH</span>
+        <p>Impossible is for the unwilling</p>
+        <ul>
+          <li class="one" onclick="window.open('6-books.html','_self')">Book Solution</li>
+          <a href="#">
+            <li class="two">Chapter Notes</li>
+          </a>
+          <a href="#">
+            <li class="three">Chapter MCQs</li>
+          </a>
+          <a href="#">
+            <li class="four">Summary</li>
+          </a>
+        </ul>
+      </div>
+      <div class="right">
+        <img src="res/sixth.png" alt="" srcset="">
+      </div>
+    </section>
+
+    <section class="sec-seven">
+      <div class="left">
+        <span class="class">SEVENTH</span>
+        <p>Either you run the day or the day runs you</p>
+        <ul>
+          <li class="one" onclick="window.open('7-books.html','_self')">Book Solution</li>
+          <a href="#">
+            <li class="two">Chapter Notes</li>
+          </a>
+          <a href="#">
+            <li class="three">Chapter MCQs</li>
+          </a>
+          <a href="#">
+            <li class="four">Summary</li>
+          </a>
+        </ul>
+      </div>
+      <div class="right">
+        <img src="res/seventh.png" alt="" srcset="">
+      </div>
+    </section>
+
+    <section class="sec-eighth">
+      <div class="left">
+        <span class="sp-e">EIGHTH</span>
+        <p class="p-e">Dream big and dare to fail</p>
+        <ul>
+          <li class="one" onclick="window.open('8-books.html','_self')">Book Solution</li>
+          <a href="#">
+            <li class="two">Chapter Notes</li>
+          </a>
+          <a href="#">
+            <li class="three">Chapter MCQs</li>
+          </a>
+          <a href="#">
+            <li class="four">Summary</li>
+          </a>
+        </ul>
+      </div>
+      <div class="right">
+        <img src="res/eighth.png" alt="" srcset="">
+      </div>
+    </section>
+
+    <section class="sec-nine">
+      <div class="left">
+        <span class="class">NINTH</span>
+        <p>No pressure no diamonds</p>
+        <ul>
+          <li class="one" onclick="window.open('9-books.html','_self')">Ncert Solution</li>
+          <a href="#">
+            <li class="two">Chapter Notes</li>
+          </a>
+          <a href="#">
+            <li class="three">Chapter MCQs</li>
+          </a>
+          <a href="#">
+            <li class="four">Summary</li>
+          </a>
+        </ul>
+      </div>
+      <div class="right">
+        <img src="res/ninth.png" alt="" srcset="">
+      </div>
+    </section>
+
+    <section class="sec-ten">
+      <div class="left">
+        <span class="class">TENTH</span>
+        <p>Don't wish it were easie</p>
+        <ul>
+          <li class="one" onclick="window.open('10-books.html','_self')">Ncert Solution</li>
+          <a href="#">
+            <li class="two">Chapter Notes</li>
+          </a>
+          <a href="#">
+            <li class="three">P.Y.Q Download</li>
+          </a>
+          <a href="#"></a>
+          <li class="four">Summary</li></a>
+        </ul>
+      </div>
+      <div class="right">
+        <img src="res/tenth.png" alt="" srcset="">
+      </div>
+    </section>
+
+    <section class="sec-eleven">
+      <div class="left">
+        <span class="class">ELEVENTH</span>
+        <p>Don’t let yesterday take up too much of today</p>
+        <ul>
+          <li class="one" onclick="window.open('11-stream.html','_self')">Ncert Solution</li>
+          <a href="#">
+            <li class="two">Chapter Notes</li>
+          </a>
+          <a href="#">
+            <li class="three">Question Bank</li>
+          </a>
+          <a href="#">
+            <li class="four">Summary</li>
+          </a>
+        </ul>
+      </div>
+      <div class="right">
+        <img src="res/eleventh.png" alt="" srcset="">
+      </div>
+    </section>
+
+    <section class="sec-twelfth">
+      <div class="left">
+        <span class="class">TWELFTH</span>
+        <p>Simplicity is the ultimate sophistication</p>
+        <ul>
+          <li class="one" onclick="window.open('12-stream.html','_self')">Ncert Solution</li>
+          <a href="#">
+            <li class="two">Chapter Notes</li>
+          </a>
+          <a href="#">
+            <li class="three">P.Y.Q Download</li>
+          </a>
+          <a href="#">
+            <li class="four">Summary</li>
+          </a>
+        </ul>
+      </div>
+      <div class="right">
+        <img src="res/twelfth.png" alt="" srcset="">
+      </div>
+    </section>
+
+    <section class="scroller" id="scroller">
+      <div class="container">
+        <a href="">
+          <div class="one">Video</div>
+        </a>
+        <a href="">
+          <div class="two">Notes</div>
+        </a>
+        <a href="">
+          <div class="three">MCQ</div>
+        </a>
+        <a href="">
+          <div class="four">Question Bank</div>
+        </a>
+        <a href="essay.html">
+          <div class="five">Essay</div>
+        </a>
+        <a href="letter.html">
+          <div class="six">Letters</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="makeslide">
+      <div class="slider-container">
+        <img src="res/banner.jpg" class="active" />
+        <img src="res/bg.jpg" />
+        <img src="res/bg2.jpg" />
+        <img src="res/banner.jpg" />
+        <div class="slider-nav">
+          <button class="active" onclick="gotoSlide(0)"></button>
+          <button onclick="gotoSlide(1)"></button>
+          <button onclick="gotoSlide(2)"></button>
+          <button onclick="gotoSlide(3)"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="wwh">
+      <div class="wContent">
+        <h1>What We Have</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        <div class="wList">
+          <ul>
+            <li>Ncert Solutions</li>
+            <li>Chapter Notes</li>
+            <li>Chapter Summary</li>
+            <li>Question Bank</li>
+            <li>Chapter's MCQs</li> 
+            <li>Sample Paper</li>
+            <li>P.Y Questions</li>
+            <li>4 alternate answers</li>
+          </ul>
+        </div>
+      </div>
+    </section> what we have section -->
+
+    <section class="qContainer" id="accordion">
+      <h1><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+          class="bi bi-patch-question-fill" viewBox="0 0 16 16">
+          <path
+            d="M5.933.87a2.89 2.89 0 0 1 4.134 0l.622.638.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636zM7.002 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm1.602-2.027c.04-.534.198-.815.846-1.26.674-.475 1.05-1.09 1.05-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745.336 0 .504-.24.554-.627z" />
+        </svg> Frequently Asked Questions</h1>
+      <!-- <p>Here are some pre-asked questions you can checkout.</p> -->
+      <div class="question">
+        <button class="accordion">How to get notes of NCERT book chapters? </button>
+        <div class="panel">
+          <p>We are providing free notes of each chapter of NCERT book for students you can access it from our website.
+            For notes <a href="#scroller" style="font-weight: 600;">Click Here</a> and go on notes sections to access
+            free notes.</p>
+        </div>
+
+        <button class="accordion">How do I get sample paper of CBSE board exams?</button>
+        <div class="panel">
+          <p><a href="#scroller" style="font-weight: 600;">Click Here</a> and check question bank section where there is a slot for board exam's
+            sample paper. After selecting your class you can access it.</p>
+        </div>
+
+        <button class="accordion">How can I get NCERT book chapter's summary?</button>
+        <div class="panel">
+          <p>There are sections for each class above where there are so many stuff. Go to your class section by
+            scrolling up and select fourth option which is "chapters summary" select it and check out summary of chapter
+            which you want.</p>
+        </div>
+
+        <button class="accordion">What stuff do you have specially for board classes?</button>
+        <div class="panel">
+          <p>We are supporting all students by providing them free content of each type so that it can help them to
+            score higher in there exams and can also enhance there knowledge and skills. From notes and chapter's
+            summary to sample paper and question bank we have approximately everything for them you can explore our
+            website so that you can get all the needed material.</p>
+        </div>
+
+        <button class="accordion">What stuff do AirSchools have?</button>
+        <div class="panel">
+          <p>AirSchools provide so many content for students that actually help them. Few of them are listed here: Out Of 100, 80% <span style="font-weight: 600;">AI Generated</span> Answers  Of Ncert
+            Book, Previous year questions, Sample papers, Question bank, Notes, MCQs for each chapter, Summary
+            and special content for board classes.</p>
+        </div>
+
+        <!-- <button class="accordion">What is the vision of AirSchools</button>
+            <div class="panel">
+              <p>AirSchools website is developed and maintained by NSM's owner <span style="font-weight: 600;">"Nitin Sharma"</span>. The only purpose of him is to provide quaility content which has been uploaded on internet to students free of cost so that it can help them to score higher in their exams, increase their knowledge and facilate them to develop some needed skills.</p> -->
+      </div>
+  </div>
+  </section>
+
+  <!-- tabs section  -->
+  <!-- <section class="tabs">
+      <button class="tablink" onclick="openPage('Home', this, '#f44336')">Home</button>
+      <button class="tablink" onclick="openPage('News', this, '#04AA6D')" id="defaultOpen">News</button>
+      <button class="tablink" onclick="openPage('Contact', this, '#2196F3')">Contact</button>
+      <button class="tablink" onclick="openPage('About', this, '#ff5722')">About</button>
+      <div id="Home" class="tabcontent">
+        <h3>Home</h3>
+        <p>Home is where the heart is..</p>
+      </div>
+      
+      <div id="News" class="tabcontent">
+        <h3>News</h3>
+        <p>Some news this fine day!</p> 
+      </div>
+      
+      <div id="Contact" class="tabcontent">
+        <h3>Contact</h3>
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+      </div>
+      
+      <div id="About" class="tabcontent">
+        <h3>About</h3>
+        <p>Who we are and what we do.</p>
+      </div>
+    </section> -->
+
+
+  <!-- our vision -->
+  <section class="vision">
+    <div class="v-content">
+      <h1><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+          class="bi bi-person-workspace" viewBox="0 0 16 16">
+          <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+          <path
+            d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z" />
+        </svg> Our Vision</h1>
+      <p>AirSchools website is developed and maintained by <span style="font-weight: 600;">"Nitin Sharma"</span>. <span
+          class="v-remove"> He want to chance the education sector and by AirSchools this is his first step towards it
+          also he want to facilate learning for students so that it can be easy to learn and understanding the concept
+          for them.</span> The only purpose of him is to provide quaility content which has been uploaded on internet to
+        students free of cost so that it can help them to score higher in their exams, increase their knowledge and
+        facilate them to develop some needed skills.</p>
+    </div>
+
+    <div class="vSocial">
+      <span title="twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-twitter" viewBox="0 0 16 16">
+          <path
+            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+        </svg></span>
+      <span class="fb" title="facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg></span>
+      <span class="yt" title="youtube"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+          <path
+            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+        </svg></span>
+      <span class="insta" title="instagram"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+          <path
+            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+        </svg></span>
+    </div>
+  </section>
+
+
+  <!-- about us -->
+  <section class="testimonial">
+    <div class="users">
+      <div class="overlay"></div>
+      <div class="headerT">
+        <h1>Testimonial</h1>
+      </div>
+      <div class="testContainer">
+        <div class="testRow">
+          <div class="testItem">
+            <img src="res/profile.png" alt="" srcset="">
+            <p>Meet Nitin, the proud owner of his own company with a focus on the education sector. Nitin is a skilled
+              developer with a passion for using technology to transform the way people learn. His commitment to
+              providing exceptional service to all students is truly inspiring.</p>
+            <h3>Nitin Sharma</h3>
+            <h4>Owner of NSM</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- scroll to top button -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top <svg xmlns="http://www.w3.org/2000/svg" width="16"
+      height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+      <path
+        d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+    </svg></button>
+
+  <!-- footer -->
+  <footer>
+    <span class="f1" style="color: #fff; float: left; margin-left: 10vw;">Made with <span
+        style="color: red;">&#10084;</span> by Nitin Sharma <a href="contact-me.html" class="footer-contact"><u>Contact
+          Us</u>.</span> <span class="f2" style="color: #fff; float: right;"> &copy; 2023 - AirSchools | All Rights
+      Reserved.
+    </span></a>
+  </footer>
+  </div>
+</body>
+
+</html>
+
+<script>
+  //navigation bar scroll effect
+
+  window.onscroll = function () { myFunction() };
+
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+</script>
+
+
+<!--for search box filter from  body -->
+
+<!-- <script>
+    function liveSearch() {
+  // Locate the card elements
+  let cards = document.querySelectorAll('p, h1, span, div')
+  // Locate the search input
+  let search_query = document.getElementById("searchbox").value;
+  // Loop through the cards
+  for (var i = 0; i < cards.length; i++) {
+    // If the text is within the card...
+    if(cards[i].innerText.toLowerCase()
+      // ...and the text matches the search query...
+      .includes(search_query.toLowerCase())) {
+        // ...remove the `.is-hidden` class.
+        cards[i].classList.remove("is-hidden");
+    } else {
+      // Otherwise, add the class.
+      cards[i].classList.add("is-hidden");
+    }
+  }
+}
+</script> -->
+
+<!-- for  image slider -->
+<script>
+  // Get the images and navigation buttons
+  const images = document.querySelectorAll(".slider-container img");
+  const navBtns = document.querySelectorAll(".slider-nav button");
+
+  // Set the initial slide index and image opacity
+  let currentSlide = 0;
+  images[currentSlide].classList.add("active");
+
+  // Function to go to a specific slide
+  function gotoSlide(i) {
+    // Remove the active class from current slide/image and button
+    images[currentSlide].classList.remove("active");
+    navBtns[currentSlide].classList.remove("active");
+
+    // Set the new slide index and show the new slide/image and button
+    currentSlide = i;
+    images[currentSlide].classList.add("active");
+    navBtns[currentSlide].classList.add("active");
+  }
+
+  // Function to go to the next slide
+  function nextSlide() {
+    // If at the end of the slides, go back to beginning
+    if (currentSlide === images.length - 1) {
+      gotoSlide(0);
+    } else {
+      gotoSlide(currentSlide + 1);
+    }
+  }
+
+  // Automatically change slides every 3 seconds
+  setInterval(nextSlide, 3000);
+
+  // Add event listeners to navigation buttons
+  navBtns.forEach((btn, i) => btn.addEventListener("click", () => gotoSlide(i)));
+</script>
+
+
+<!-- for smooth scrolling -->
+<script>
+  $(document).ready(function () {
+    // Add smooth scrolling to all links
+    $("a").on('click', function (event) {
+
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+</script>
+
+<!-- for Frequently asked questions section  -->
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+
+  //scroll to top button
+
+  // Get the button:
+  let mybutton = document.getElementById("myBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () { scrollFunction() };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
+</script>
+
+
+
+
+
+
+<!-- for autocomplete on input type text at home -->
+
+<script>
+  function autocomplete(inp, arr) {
+    /*the autocomplete function takes two arguments,
+    the text field element and an array of possible autocompleted values:*/
+    var currentFocus;
+    /*execute a function when someone writes in the text field:*/
+    inp.addEventListener("input", function (e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false; }
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function (e) {
+            /*insert the value for the autocomplete text field:*/
+            inp.value = this.getElementsByTagName("input")[0].value;
+            /*close the list of autocompleted values,
+            (or any other open lists of autocompleted values:*/
+            closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+    });
+    /*execute a function presses a key on the keyboard:*/
+    inp.addEventListener("keydown", function (e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+    });
+    function addActive(x) {
+      /*a function to classify an item as "active":*/
+      if (!x) return false;
+      /*start by removing the "active" class on all items:*/
+      removeActive(x);
+      if (currentFocus >= x.length) currentFocus = 0;
+      if (currentFocus < 0) currentFocus = (x.length - 1);
+      /*add class "autocomplete-active":*/
+      x[currentFocus].classList.add("autocomplete-active");
+    }
+    function removeActive(x) {
+      /*a function to remove the "active" class from all autocomplete items:*/
+      for (var i = 0; i < x.length; i++) {
+        x[i].classList.remove("autocomplete-active");
+      }
+    }
+    function closeAllLists(elmnt) {
+      /*close all autocomplete lists in the document,
+      except the one passed as an argument:*/
+      var x = document.getElementsByClassName("autocomplete-items");
+      for (var i = 0; i < x.length; i++) {
+        if (elmnt != x[i] && elmnt != inp) {
+          x[i].parentNode.removeChild(x[i]);
+        }
+      }
+    }
+    /*execute a function when someone clicks in the document:*/
+    document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+    });
+  }
+
+  /*An array containing all the country names in the world:*/
+  var countries = ["NCERT Solution", "CBSE Updates", "AirSchools Notifications", "Previous Year Questions", "Chapters Summary", "Question Bank", "Notes", "MCQs", "Essays", "Letters", "Sample Paper"];
+
+  /*initiate the autocomplete function on the "searchbox" element, and pass along the countries array as possible autocomplete values:*/
+  autocomplete(document.getElementById("searchbox"), countries);
+</script>
+
+
+
+<!-- for switching tabs -->
+<!-- <script>
+    function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+        // tablinks[i].style.color = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script> -->
+
+
+<!-- for type writer effect animation on sub-text -->
+<script>
+  const words = ["Earth", "is", "surrounded", "with", "knowledge", "like", "air."];
+  let wordIndex = 0;
+  let letterIndex = 0;
+  const text = document.querySelector(".low-text");
+
+  function typeWriter() {
+    const word = words[wordIndex];
+    if (letterIndex < word.length) {
+      text.textContent += word[letterIndex];
+      letterIndex++;
+      setTimeout(typeWriter, 150);
+    } else {
+      text.textContent += " ";
+      wordIndex++;
+      letterIndex = 0;
+      if (wordIndex >= words.length) {
+        setTimeout(restartTyping, 1500);
+        return;
+      }
+      setTimeout(typeWriter, 100);
+    }
+  }
+
+  function restartTyping() {
+    text.textContent = "";
+    wordIndex = 0;
+    letterIndex = 0;
+    typeWriter();
+  }
+
+  typeWriter();
+</script>
+
+
+<!-- for menu toggle -->
+<script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+</script>
+
+<!-- show name -->
+<script>
+  
+  // Function to ask for the name and save it to localStorage
+  function askAndSaveName() {
+    var name = prompt('Please enter your first name and refresh the site after it:');
+    localStorage.setItem('username', name);
+  }
+
+  // Check if the name null or the length is greater than or qual to 10 if true than ask again.
+  var savedName = localStorage.getItem('username');
+  if (savedName == null || savedName.length >= 10) {
+
+    Swal.fire({
+            title: 'Error!',
+            text: 'Your username must be < 10.',
+            icon: 'warning',
+            confirmButtonText: 'OK'
+          });
+    askAndSaveName();
+  }
+  
+  // Check if the name's length is less than or qual to 6
+  else if(savedName.length <= 6){
+    var name = savedName;
+    document.getElementById('name').textContent = name + " 🙂";
+  }
+  else {
+    var name = savedName;
+    document.getElementById('name').textContent = name;
+  }
+
+  // check if the name is nill or null string
+  if(savedName == "nill" || savedName == "null" || savedName == "Null" || savedName == "Nill"){
+    localStorage.removeItem('username');
+    Swal.fire({
+            title: 'Not Valid!',
+            text: 'Your username is not valid.',
+            icon: 'warning',
+            confirmButtonText: 'OK'
+          });
+    askAndSaveName();
+    // var greeting = savedName + " is not valid name";
+    // document.getElementById('greeting').textContent = greeting;
+  }
+
+</script>
+
+<script>
+
+function closeNav(){
+  var nav = document.getElementsByClassName('navlinks-r');
+if (nav.length > 0) {
+  nav[0].style.display = 'none';
+}
+
+}
+
+</script>
+<!-- for customise alerts -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.js"></script>
